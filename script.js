@@ -11,15 +11,12 @@
     return sex.genus === 'male';
     });
 
- var onlyFemale = arrWithObj.filter(function(sex){    
-    return sex.genus === 'female';
-    });
-
- if(onlyMale.length > onlyFemale.length) {
-     console.log('Мужчин больше, их: ' + onlyMale.length)
- } else if(onlyMale.length < onlyFemale.length) {
-    console.log('Женщин больше, их: ' + onlyFemale.length)
-} else {
-    console.log('Женщин и мужчин одинаковое кол-во, их по: ' + onlyFemale.length)
+if ((arrWithObj.length / 2) < onlyMale.length) {
+    console.log('Мужчин больше');
+}   else if ((arrWithObj.length / 2) > onlyMale.length) {
+    console.log('Женщин больше');
+}   else {
+    console.log('Женщин и мужчин одинаковое кол-во');
 }
+
  console.log('Средний возраст:' + avgAge);
